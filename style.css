@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.body {
+  background-image: url("snake02.png");
+  min-height: 100vh;
+  background-size: 101vw 101vh;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#score {
+  position: absolute;
+  /* top: 1px;
+    right: 150px; */
+  right: 130px;
+  top: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  color: aliceblue;
+  font-family: sans-serif;
+}
+
+#high-score {
+  position: absolute;
+  /* top: 1px;
+    right: 150px; */
+  right: 130px;
+  top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: aliceblue;
+  font-family: sans-serif;
+}
+
+.board {
+  background: linear-gradient(green, yellow);
+  background-color: rgb(250, 215, 215);
+  width: 55vw;
+  height: 92vh;
+  margin-left: 5rem;
+  /* border: 6px solid black; */
+  /* border-radius: 5px; */
+  display: grid;
+  grid-template-rows: repeat(18, 1fr);
+  grid-template-columns: repeat(18, 1fr);
+}
+
+/* writing a class for the snake's head */
+/* snake's head will be of the red color */
+.head {
+  background-color: maroon;
+  border: 2px solid purple;
+  border-radius: 12px;
+  transform: scale(1.02);
+}
+
+/* snake's body will be of the purple color except it's head */
+.snake {
+  background-color: rgb(139, 0, 67);
+  /* border: .25vmin solid black; */
+  /* border-radius: 12px; */
+  border: 0.25vmin solid maroon;
+}
+
+/* writing a class for the snake's food */
+/* snake's food will be of the yellow color */
+.food {
+  background-color: brown;
+
+  border: 0.25vmin solid black;
+  border-radius: 8px;
+}
+
+/* let us add some responsiveness to our snake game */
+@media (max-width: 768px) {
+  .body {
+    background-image: url("snake02.png");
+    min-height: 100vh;
+    background-size: 101vw 101vh;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .board {
+    height: 60vh;
+    width: 55vw;
+    margin-left: 1rem;
+  }
+}
